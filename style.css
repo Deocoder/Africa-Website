@@ -5,9 +5,9 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
- font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
 }
-
 
 @font-face {
   font-family: review;
@@ -56,6 +56,13 @@ button {
   cursor: pointer;
 }
 
+.first-page .btn {
+  color: #fff;
+}
+.first-page .btn2 {
+  color: #fff;
+}
+
 .btn {
   border: 1px solid var(--primary-colour);
   border-radius: 20px;
@@ -80,7 +87,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #111;
+  background-color: var(--primary-colour);
   border-radius: 8px;
   width: 100%;
 }
@@ -220,4 +227,47 @@ nav .logo a span {
 
 .text h1 {
   font-size: 80px;
+}
+
+/*  */
+.first-page {
+  background: url(img/vincent-van-zalinge-d78xhrxAPBI-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover; /* Add this property */
+  color: #fff;
+}
+
+.pattern {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: url(img/patterndesign.png);
+  height: 100px;
+  /* border: 2px solid #fc9c03; */
+}
+
+
+/*  */
+.Content-con{
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.Content-con h2{
+  color: var(--primary-colour);
+  text-align: center;
+  margin-left: -10%;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.col-2{
+  flex-basis: 50%;
+  padding: 10px;
 }
