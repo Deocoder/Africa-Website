@@ -38,9 +38,11 @@
         >
         <ul>
           <li><a href="#" data-text="Home">Home</a></li>
-          <li><a href="#" data-text="About">About</a></li>
-          <li><a href="#" data-text="Aspirations">Aspirations</a></li>
-          <li><a href="#" data-text="Our Culture">Our Culture</a></li>
+          <li><a href="#about" data-text="About">About</a></li>
+          <li>
+            <a href="#aspirations" data-text="Aspirations">Aspirations</a>
+          </li>
+          <li><a href="#culture" data-text="Our Culture">Our Culture</a></li>
           <li><a href="#" data-text="Contact">contact</a></li>
         </ul>
       </div>
@@ -52,7 +54,7 @@
     </section>
     <section class="pattern"></section>
 
-    <section class="Content-con">
+    <section class="Content-con" id="aspirations">
       <h2>Aspirations</h2>
       <div class="row">
         <div class="col-2">
@@ -79,14 +81,16 @@
           </ul>
         </div>
         <div class="col-2">
-          <img src="img/annie-spratt-cVEOh_JJmEE-unsplash.jpg" alt="" />
+          <div class="img-con">
+            <img src="img/erol-ahmed-_CeW6TRUWws-unsplash.jpg" alt="" />
+          </div>
         </div>
       </div>
     </section>
 
     <section class="pattern"></section>
 
-    <section class="Content-con">
+    <section class="Content-con" id="about">
       <h2>About Africa</h2>
       <div class="row">
         <div class="col-2">
@@ -161,7 +165,7 @@
 
     <section class="pattern"></section>
 
-    <div class="Content-con">
+    <div class="Content-con" id="culture">
       <h2>Our Culture</h2>
       <div class="splide" id="image-slider">
         <div class="splide__track">
@@ -356,9 +360,9 @@
         <div class="footer-menu">
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#aspirations">Aspirations</a></li>
+            <li><a href="#culture">Our Culture</a></li>
           </ul>
         </div>
         <div class="footer-contact">
@@ -368,6 +372,25 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal Box -->
+    <div id="modelbox">
+      <div class="model-img">
+        <img src="img/erol-ahmed-_CeW6TRUWws-unsplash.jpg" alt="" />
+      </div>
+
+      <div class="offer-text">
+        <h2>Get the latest news on Africa</h2>
+        <p>
+          Subscribe for Up to date Africa news, recipes and traditions and culture
+        </p>
+        <form action="">
+          <input type="email" placeholder="Email Address" />
+          <button type="submit">Suscribe</button>
+        </form>
+      </div>
+      <i class="fa fa-close close-icon" onclick="closeModal()"></i>
+    </div>
   </body>
   <script src="app.js"></script>
 </html>

@@ -34,12 +34,19 @@ document.addEventListener("DOMContentLoaded", function () {
     type: "loop",
     autoplay: true,
     interval: 1000,
-  }).mount();
-});
+  }).mount()
+})
 document.addEventListener("DOMContentLoaded", function () {
   new Splide("#image-slider2", {
     type: "loop",
     autoplay: true,
     interval: 1000,
-  }).mount();
-});
+  }).mount()
+})
+
+
+let modelbox = document.getElementById("modelbox")
+
+function closeModal() {
+  modelbox.style.display = "none"
+}

@@ -9,6 +9,10 @@
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: review;
   src: url(ReviewPoster-Regular-Trial-BF63f6d0dd0681a.otf);
@@ -21,6 +25,7 @@
 body {
   overflow-x: hidden;
 }
+/* Utilities */
 
 h1 {
   font-size: 50px;
@@ -59,6 +64,7 @@ button {
 .first-page .btn {
   color: #fff;
 }
+
 .first-page .btn2 {
   color: #fff;
 }
@@ -91,6 +97,8 @@ body::-webkit-scrollbar-thumb {
   border-radius: 8px;
   width: 100%;
 }
+
+/* Nav */
 
 nav {
   display: flex;
@@ -202,19 +210,32 @@ nav {
 }
 
 .navigation ul li:nth-child(6n + 1) a::before {
-  background-color: #2c2c2c;
+  background-color: #0002;
 }
 .navigation ul li:nth-child(6n + 2) a::before {
-  background-color: #727272;
+  background-color: #0002;
 }
 .navigation ul li:nth-child(6n + 3) a::before {
   background-color: #0002;
 }
 .navigation ul li:nth-child(6n + 4) a::before {
-  background-color: #fff;
+  background-color: #0002;
 }
 .navigation ul li:nth-child(6n + 5) a::before {
-  background-color: #2c2c2c;
+  background-color: #0002;
+}
+
+/* Pages */
+
+/*  */
+.first-page {
+  background: url(img/vincent-van-zalinge-d78xhrxAPBI-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover; /* Add this property */
+  color: #fff;
 }
 
 .text {
@@ -229,23 +250,11 @@ nav {
   font-size: 80px;
 }
 
-/*  */
-.first-page {
-  background: url(img/vincent-van-zalinge-d78xhrxAPBI-unsplash.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100vh;
-  background-size: cover; /* Add this property */
-  color: #fff;
-}
-
 .pattern {
   margin-top: 30px;
   margin-bottom: 30px;
   background: url(img/patterndesign.png);
   height: 100px;
-  /* border: 2px solid #fc9c03; */
 }
 
 /*  */
@@ -264,17 +273,6 @@ nav {
   margin-left: -10%;
 }
 
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.col-2 {
-  flex-basis: 50%;
-  padding: 10px;
-}
-
 .Content-con .img-con {
   height: 500px;
 }
@@ -289,14 +287,25 @@ nav {
   height: 500px;
 }
 
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.col-2 {
+  flex-basis: 50%;
+  padding: 10px;
+}
+
 /*  */
-footer{
+footer {
   padding: 60px 40px;
   /* border: 1px solid #000; */
   background-color: var(--primary-colour);
   color: #fff;
 }
-.footer-content .logo a span{
+.footer-content .logo a span {
   color: #000;
 }
 
@@ -304,4 +313,118 @@ footer .footer-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* Modal-box */
+#modelbox {
+  /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 1); */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  width: 80%;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.model-img {
+  height: 200px;
+  width: 100%;
+}
+
+.model-img img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.offer-text {
+  padding: 20px ;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.offer-text h2 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 33px;
+  margin-bottom: 20px;
+}
+
+.offer-text form {
+  margin-top: 30px;
+  display: flex;
+  border-radius: 4px;
+  background: #efefef;
+}
+
+.offer-text form input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 12px 10px;
+}
+
+.offer-text form button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background: var(--primary-colour);
+  color: #fff;
+  padding: 0 15px;
+  border-radius: 4px;
+}
+
+.close-icon {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  color: #fff;
+  padding-top: 5px;
+  text-align: center;
+  background-color: var(--primary-colour);
+  right: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+/*  */
+@media screen and (max-width: 768px) {
+  .text {
+    margin-top: 30%;
+    text-align: center;
+  }
+  .text h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+  .text h3 {
+    font-size: 15pxx;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .footer-content .footer-logo {
+    width: 100%;
+  }
+  .footer-content .footer-menu {
+    width: 100%;
+  }
+  .footer-content .footer-contact {
+    width: 100%;
+  }
 }
