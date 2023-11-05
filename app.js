@@ -28,3 +28,18 @@ function checkboxes() {
     }
   })
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide("#image-slider", {
+    type: "loop",
+    autoplay: true,
+    interval: 1000,
+  }).mount();
+});
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide("#image-slider2", {
+    type: "loop",
+    autoplay: true,
+    interval: 1000,
+  }).mount();
+});
